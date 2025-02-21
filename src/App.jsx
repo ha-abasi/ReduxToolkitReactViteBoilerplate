@@ -5,6 +5,7 @@ import logo from './assets/restaurant_logo.png'
 import {useDispatch, useSelector} from "react-redux";
 import {pizzaOrder} from "./redux/features/pizza/pizzaSlice.js";
 import {burgerOrder} from "./redux/features/burger/burgerSlice.js";
+import ProductListView from "./redux/features/products/ProductListView.jsx";
 
 function App() {
   const pizza = useSelector(state => state.pizza);
@@ -44,6 +45,9 @@ function App() {
       <button onClick={handleClickPizza}>Order Pizza</button>
       &nbsp;|&nbsp;
       <button onClick={handleClickBurger}>Order Burger</button>
+
+    <hr />
+       <ProductListView/>
     </>
   )
 }
