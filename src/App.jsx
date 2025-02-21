@@ -1,5 +1,7 @@
 
 import './App.css'
+import logo from './assets/restaurant_logo.png'
+
 import {useDispatch, useSelector} from "react-redux";
 import {pizzaOrder} from "./redux/features/pizza/pizzaSlice.js";
 import {burgerOrder} from "./redux/features/burger/burgerSlice.js";
@@ -21,13 +23,19 @@ function App() {
 
   return (
     <>
+        <img src={logo} style={{width: "210px"}}/>
+        <h1>Welcome to our restaurant</h1>
+        <p>We offer a wide range of pizza and burger options.</p>
+        <hr />
+        <strong style={{fontSize: "18px", color: "crimson"}}>If you order a pizza, you will get two burger buns along with it!</strong>
+
       <table className={"table"} style={{textAlign: "left"}}>
         <tbody>
           <tr>
-            <td>Pizza: </td><td style={{color: "green"}}>{pizza.pizzaBase.toLocaleString()}</td>
+            <td style={{paddingRight: "10px"}}>Pizza amount left: </td><td style={{color: "green"}}>{pizza.pizzaBase.toLocaleString()}</td>
           </tr>
           <tr>
-            <td>Burger:</td><td style={{color: "red"}}>{burger.burgerBuns.toLocaleString()}</td>
+            <td style={{paddingRight: "10px"}}>Burger amount left:</td><td style={{color: "red"}}>{burger.burgerBuns.toLocaleString()}</td>
           </tr>
         </tbody>
       </table>
