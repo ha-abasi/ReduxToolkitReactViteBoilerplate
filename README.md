@@ -6,8 +6,8 @@
     #vite
 
 # Adding Redux Toolkit and React-Redux to the project:
-    #npm install @reduxjs/toolkit
-    #npm install react-redux
+    #npm install @reduxjs/toolkit // to be able to use createSlice and configureStore
+    #npm install react-redux // to be able to use Provider, useSelector, useDispatch, connect
 
 
 
